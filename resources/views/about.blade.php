@@ -3,11 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>{{$details['title']}}</title>
+    <style>
+        .container {
+                position: absolute;
+                height: 200px;
+                width: 400px;
+                margin:  -200px 0 0 -200px;
+                top: 50%;
+                left: 50%;
+        }
+    </style>
   </head>
   <body>
-    <table border="1" style="width:70%">
+    <div class="container">
+    <table border="1" >
         <tr>
-            <td width="20%">Id</td>
+            <td>Id</td>
             <td>{{ $details['guid'] }}</td>
         </tr>
         <tr>
@@ -32,6 +43,7 @@
       <li>{{ $details['date'] }}</li>
       <li>{{ $details['body'] }}</li> -->
     </table>
+</div>
     <br>
     <br>
   </body>
