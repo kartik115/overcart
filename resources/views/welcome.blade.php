@@ -3,7 +3,7 @@
     <head>
         <title>Overcart Assignment</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css"> -->
 
         <style>
             html, body {
@@ -20,9 +20,12 @@
             }
 
             .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
+                position: absolute;
+                height: 200px;
+                width: 400px;
+                margin:  -400px 0 0 -200px;
+                top: 50%;
+                left: 50%;
             }
 
             .content {
@@ -36,7 +39,7 @@
         </style>
     </head>
     <body>
-      <div class="content">
+      <div class="container">
         @foreach ($result as $person)
           <a href="{{URL::to('about',array('id'=>$person['guid']))}}">
             <div class="title">
